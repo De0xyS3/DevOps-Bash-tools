@@ -23,6 +23,7 @@ cat > /etc/exports << EOL
 $p_dir  $server_ip(rw,sync,no_root_squash,no_subtree_check)
 
 EOL
+#sudo sh -c "echo '$p_dir $server_ip(rw,sync,no_root_squash,no_subtree_check)' >> /etc/exports"
 
 echo "Reiniciando servicios:"
 sudo systemctl restart nfs-kernel-server
