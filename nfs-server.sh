@@ -1,4 +1,5 @@
 #!/bin/bash
+#showmount -e $ip
 sudo apt-get install figlet &> /dev/null
 echo "Comprobando si NFS está instalado..."
 if ! [ -x "$(command -v nfs-kernel-server)" ]; then
